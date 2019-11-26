@@ -5,7 +5,7 @@
 
 卷積層
 ===
-- 作用是使用Kernel掃描整張圖像提取空間特徵，Kernel越大效果越好但計算量也越大。
+- 作用是使用kernel filter逐步掃描整張圖像去提取空間特徵，Kernel越大效果越好但計算量也越大。
 - 常見的一些折衷作法，像是採用diladed convolution或separable convolution。
 
 激活層
