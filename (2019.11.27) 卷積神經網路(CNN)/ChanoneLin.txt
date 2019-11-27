@@ -1,0 +1,9 @@
+11/27
+卷基層基本參數
+[convolutional]
+batch_normalize =是否做batch_normalize
+filters=kernel數量
+size=kernel尺寸
+stride=kernel 的移動步數
+pad=圖外框加幾圈0
+activation=積活函數
