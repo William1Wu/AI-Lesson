@@ -1,0 +1,7 @@
+縩糷膀セ把计
+(1) kernel size
+(2) kernel dilated rate瑌縩干 0 计
+(2) kernel 计
+(3) stride縩巨˙
+(4) padding娩矪瞶よΑ﹚竡ㄒ琌暗娩耎耎干よΑ单
+(5) 块块硄笵计
