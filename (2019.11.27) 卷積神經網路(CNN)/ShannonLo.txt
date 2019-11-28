@@ -1,0 +1,5 @@
+Feature Map: 表示圖像
+Kernel: 與圖像做卷積之矩陣,可以有多個
+Stride: 當kernel與圖像做卷積時,其在圖像上滑動時的步數
+Padding: 於圖像補0的方式
+Activation：要使用何種 activation function
