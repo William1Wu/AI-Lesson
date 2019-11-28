@@ -1,0 +1,5 @@
+卷積層的基本參數
+input_size
+filter_size
+stride
+padding
