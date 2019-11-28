@@ -1,0 +1,17 @@
+卷積層有哪些類型及作用？
+(1) 空洞（atrous）卷積，或稱擴張（dilated）卷積：
+　 其使用的 kernel 數值之間補 0，讓卷積執行時運算量不會增加、同時卻能增加視野（感受野，receptive fields）。
+(2) 轉置（transposed）卷積，或稱反卷積（deconvolution）：
+　 並非卷積的逆操作，但可達成空間擴充、增加空間分辨率。
+　 方法一樣是執行卷積操作（只是做不同的 kernel、掃描方式等參數設定），常用於 encoder-decoder 結構。
+(3) 可分離（separable）卷積：
+　 可將卷積核操作拆分成多個步驟。
+　 將卷積操作以 y=conv(x, k) 表示，其中 x 為輸入圖，y 為輸出圖，k 表 kernel。
+　 若 k 可由下式計算得出：k = k1.dot(k2)，則此為一可分離卷積（k 的卷積操作可拆成 k1 和 k2 分別實現來取得相同效果）。
+　 神經網路中會使用的是深度可分離卷積結構（depthwise separable convolution），
+　 其將卷積拆分成 Depthwise Convolution 與 Pointwise Convolution 進行，
+　 可減少參數、降低運算量，因此會使用在輕量級網路。
+　 其中，Depthwise Convolution 的每個通道都只被一個 kernel 卷積。
+　 因每個通道獨立進行卷積運算，並未有效利用不同通道在相同位置上的特徵訊息，因此需要 Pointwise Convolution 將這些特徵圖組合成新的特徵圖。
+　 而 Pointwise Convolution 的 kernel 為 1×1×M，M 即上一層的通道數
+　 因此會將上一步的特徵圖在深度方向上做加權組合，生成新的特徵圖，且有幾個 kernel 就輸出幾張特徵圖。
