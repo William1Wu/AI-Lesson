@@ -1,3 +1,3 @@
-- kernel size: filter大小
-- stride: filter每步移動的間距
+- kernel size: filter大小，一般設定為基數
+- stride: filter 每步移動的間距
 - dilation rate: 空洞卷積的間距
