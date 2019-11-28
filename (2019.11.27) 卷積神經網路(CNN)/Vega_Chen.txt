@@ -1,0 +1,4 @@
+捲積層的基本參數
+
+訓練參數：sliding window內的值、bias
+設定參數：sliding window的尺寸(size)、數量、步距(stride)
