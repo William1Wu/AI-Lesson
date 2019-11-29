@@ -1,3 +1,5 @@
-- kernel size: filter大小，一般設定為基數
-- stride: filter 每步移動的間距
-- dilation rate: 空洞卷積的間距
+- kernel size: filter視野範圍，一般設定為基數
+- stride: filter每步移動的間距
+- dilation rate: 空洞卷積的間距，控制視野範圍
+- padding: 影響卷積層輸出特徵圖的維度，一般設定same(輸入維度等於輸出維度)
+- output size: 卷積層的kernel數量
