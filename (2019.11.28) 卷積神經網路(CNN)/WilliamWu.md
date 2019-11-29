@@ -2,8 +2,8 @@
 ===
 
 1. Dilation Convolution 
-- 作用是維持相同數量的卷積權重，增加視野範圍
-- 其做法是在兩個權重之間插入數個零值(參數: dilated rate)
+- 作用是維持相同數量的卷積權重下增加視野範圍
+- 做法是在兩個權重之間插入數個零值(參數: dilated rate)
 
 2. Depthwise Separable Convolution
 - 作用是降低計算量
