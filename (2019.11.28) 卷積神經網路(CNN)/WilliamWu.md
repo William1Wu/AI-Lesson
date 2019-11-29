@@ -1,0 +1,16 @@
+卷積層有哪些類型及作用
+===
+
+1. Dilation Convolution 
+- 作用是維持相同數量的卷積權重，增加視野範圍
+- 其做法是在兩個權重之間插入數個零值(參數: dilated rate)
+
+2. Depthwise Separable Convolution
+- 作用是降低計算量
+- 其假設是特徵圖每個通道是統計獨立
+- 計算步驟:(假設輸入圖大小是NxNxC1, 輸出大小是NxNxC2)
+  - 1. 輸入圖每一個通道各別以k*k*1的filter作掃描，再concat在一起，得到N*N*C1大小的特徵圖
+  - 2. 再用C2個1*1*C1大小filter掃描前述特徵圖，最後得到NxNxC2特徵圖
+
+3. Deconvolution
+- 作用是Upsample
