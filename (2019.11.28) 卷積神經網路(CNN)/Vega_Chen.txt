@@ -1,0 +1,13 @@
+卷積層有哪些類型及作用？
+
+1. 一般捲積
+2. dilated convolution
+	=> 這是藉由增加receptive field以解決scale variance的一種手法。可以看做先下取樣後再做一般捲積（宜注意每次下取樣的基準不同），實作上是將sliding window適當的補0。
+		參考：https://www.zhihu.com/question/54149221
+3. transpose convolution
+	=> 傳統上取樣加上dilated概念，可視為一種上取樣手法。實作上透過矩陣轉置來達到目的。
+		參考：https://medium.com/activating-robotic-minds/up-sampling-with-transposed-convolution-9ae4f2df52d0
+			  https://distill.pub/2016/deconv-checkerboard/
+4. separable convolution
+	=> 利用兩個一維矩陣的捲積運算，去近似二維矩陣的捲積運算，用於簡化計算。mobileNet即採取這個架構。
+		參考：https://medium.com/@chih.sheng.huang821/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92-mobilenet-depthwise-separable-convolution-f1ed016b3467
