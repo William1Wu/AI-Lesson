@@ -2,8 +2,3 @@
   就多了一個維度。slinding window也相應多了一個維度，滑行的方向也多了一個維度。
 2. 1x1卷積的作用
   將該層輸入資訊合併起來，僅調整通道度不做萃取特徵。通常會和別層或是該層其他運算結果cascade在一起，否則除了減少運算量無其他用途。
-
-
--- 數學式測試
-<img src="http://latex.codecogs.com/gif.latex?\frac{\partial J}{\partial \theta_k^{(j)}}=\sum_{i:r(i,j)=1}{\big((\theta^{(j)})^Tx^{(i)}-y^{(i,j)}\big)x_k^{(i)}}+\lambda \theta_k^{(j)}" />
-![](http://latex.codecogs.com/gif.latex?\\frac{\\partial J}{\\partial \\theta_k^{(j)}}=\\sum_{i:r(i,j)=1}{\\big((\\theta^{(j)})^Tx^{(i)}-y^{(i,j)}\\big)x_k^{(i)}}+\\lambda \\xtheta_k^{(j)})
