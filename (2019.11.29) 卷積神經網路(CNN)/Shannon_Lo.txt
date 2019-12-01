@@ -1,0 +1,9 @@
+Q.二維卷積和三維卷積的差異
+差異為3D卷積的輸入圖像/kernel多了一個depth維度
+即2D卷積輸入的是三維數據,kernel_size=(kernel_height, kernel_width, channel_num)；
+而3D卷積輸入的是四維數據,kernel_size = (kernel_depth, kernel_height, kernel_widt, channel_num)
+其中,depth可以是視頻上的frames，也可能是立體圖像中的不同切片
+
+Q.1x1卷積的作用
+當作用在多channels的feature map上時，相當於對不同通道上的一個線性組合
+作用為讓網絡根據需要能夠更靈活的控制數據的depth(降維/升維)
