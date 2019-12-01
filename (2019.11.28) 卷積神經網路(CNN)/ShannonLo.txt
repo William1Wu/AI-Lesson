@@ -1,0 +1,18 @@
+卷積層有哪些類型及作用
+
+擴展/空洞卷積:
+利用新增0於kernel各點之間
+作用:在保持參數個數不變的情況下增大了kernel的receptive field，同時保證輸出的feature map大小保持不變
+
+轉置卷積/反捲積
+對kernel添補0進行重新排列
+作用:對圖像進行upsampling來提高解析度
+
+深度可分離卷積
+將一個kernel分成兩個獨立的kernels，分別做
+1.depthwise卷積(不改變深度的情况下對圖像進行反捲積); 2.pointwise卷積(使用1x1x輸入圖像depth kernel)
+作用:減少參數量以提升計算速度
+
+群卷積
+先將channel分成M份，每一個group對應N/M個channel。然後concatenate各個group卷積完成後的輸出，作為這一層的輸出channel
+作用:減少訓練參數，不容易over-fitting
