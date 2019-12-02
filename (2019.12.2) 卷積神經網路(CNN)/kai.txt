@@ -1,0 +1,9 @@
+有哪些池化方法
+
+Max Pooling
+Average Pooling
+Overlapping Pooling
+Spatial Pyramid Pooling
+
+卷積層與池化層差異
+卷積層主要目的是擷取更深層的特徵，池化層主要是寶留主要特徵降低維度
