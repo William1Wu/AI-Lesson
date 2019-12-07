@@ -1,0 +1,16 @@
+CNN常用參數設置
+
+1.epoch
+2.batch
+3.learning rate
+4.降低learning rate的方法與參數
+5.loss function
+6.optimizer
+
+如何提高CNN泛化能力，也就是不要overfitting
+
+1.增加資料量
+2.dropout
+3.增加weighting decay
+4.減少模型複雜度
+5. regularization
