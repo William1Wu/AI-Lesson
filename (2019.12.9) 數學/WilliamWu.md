@@ -1,9 +1,9 @@
 Scalar、Vector、Matrix、tensor 個別定義
 ===
-Scalar: 純量。0階tensor<br>
-Vector: 向量。1階tensor<br>
-Matrix: 矩陣。2階tensor<br>
-tensor: 張量<br>
+- Scalar: 純量。0階tensor
+- Vector: 向量。1階tensor
+- Matrix: 矩陣。2階tensor
+- tensor: 張量。
 
 張量與矩陣之間差異
 ===
